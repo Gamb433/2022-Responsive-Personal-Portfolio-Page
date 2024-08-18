@@ -1,0 +1,620 @@
+:root {
+    --building-color1: #aa80ff;
+    --building-color2: #66cc99;
+    --building-color3: #cc6699;
+    --building-color4: #538cc6;
+    --window-color1: #bb99ff;
+    --window-color2: #8cd9b3;
+    --window-color3: #d98cb3;
+    --window-color4: #8cb3d9;
+  }
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    font-size: 67.5%;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Fantasy, sans-serif;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  main {
+    background: linear-gradient(
+      180deg,
+      lightblue 0%,
+      #D9AFD9,
+      #97D9E1
+    );
+  }
+  
+  h1 {
+    font-size: 4rem;
+  }
+  
+  p {
+    font-size: 2rem;
+  }
+  
+  #navbar {
+    position: absolute;
+    font-size: 3rem;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+      180deg, 
+      #FBAB7E 0%,
+      #FBAB7E 1%,
+      lightblue 100%
+    );
+    z-index: 900;
+  }
+  
+  #navbar ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 30px;
+    padding-top: 28px;
+  }
+  
+  #navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+  
+  #navbar ul li a:hover {
+    color: black;
+    font-size: 150%;
+    transition: 1s;
+  }
+  
+  #welcome-section {
+    width: 100%;
+    height: 100vh;
+    /* border-top: 1px solid orange; */
+    border-bottom: 10px solid purple;
+  }
+
+  #welcome-section h1 {
+    font-size: 4.5vh;
+    color: rgb(75, 63, 63);
+    text-decoration: overline;
+    text-decoration-thickness: 30%;   
+  }
+
+  .welcome-text.left {
+    position: absolute;
+    left: 18.5%;
+    top: 25.5%;
+  }
+  
+  .welcome-text.middle {
+    position: absolute;
+    left: 51%;
+    top: 40.5%;
+  }
+  
+  .welcome-text.t-1 {
+    position: absolute;
+    left: 29%;
+    top: 55.5%;
+  }
+  
+  .welcome-text.t-2 {
+    position: absolute;
+    left: 44.5%;
+    top: 60.5%;
+  }
+  
+  .welcome-text.t-3 {
+    position: absolute;
+    left: 57%;
+    top: 62.5%;
+  }
+
+  
+  .exlamation {
+    display: none;
+  }
+
+   
+ 
+  /* SKYLINE */
+  
+ 
+  .background-buildings, .foreground-buildings {
+    width: 100%;
+    max-width: 100%;
+    min-width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+  }
+  
+  .building-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .window-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
+  .bb1 {
+    width: 10%;
+    height: 70%;
+  }
+  
+  .bb1a {
+    width: 70%;
+  }
+    
+  .bb1b {
+    width: 80%;
+  }
+    
+  .bb1c {
+    width: 90%;
+  }
+  
+  .bb1d {
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(
+        var(--building-color1) 50%,
+        var(--window-color1)
+      );
+  }
+  
+  .bb1-window {
+    height: 10%;
+    background: linear-gradient(
+        var(--building-color1),
+        var(--window-color1)
+      );
+  }
+  
+  .bb2 {
+    width: 10%;
+    height: 40%;
+    margin-bottom: 49px;
+  }
+  
+  .bb2a {
+    border-bottom: 5vh solid var(--building-color2);
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
+  }
+  
+  .bb2b {
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        var(--building-color2),
+        var(--building-color2) 6%,
+        var(--window-color2) 6%,
+        var(--window-color2) 9%
+      );
+  }
+  
+  .bb3 {
+    width: 10%;
+    height: 55%;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--building-color3),
+        var(--building-color3),
+        var(--window-color3) 15%
+      );
+  }
+  
+  .bb4 {
+    width: 11%;
+    height: 58%;
+  }
+  
+  .bb4a {
+    width: 3%;
+    height: 10%;
+    background-color: var(--building-color4);
+  }
+  
+  .bb4b {
+    width: 80%;
+    height: 5%;
+    background-color: var(--building-color4);
+  }
+    
+  .bb4c {
+    width: 100%;
+    height: 85%;
+    background-color: var(--building-color4);
+  }
+  
+  .bb4-window {
+    width: 18%;
+    height: 90%;
+    background-color: var(--window-color4);
+  }
+  
+  /* FOREGROUND BUILDINGS - "fb" stands for "foreground building" */
+  .fb1 {
+    width: 10%;
+    height: 60%;
+  }
+  
+  .fb1a {
+    border-bottom: 7vh solid var(--building-color4);
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+  }
+  
+  .fb1b {
+    width: 60%;
+    height: 10%;
+    background-color: var(--building-color4);
+  }
+    
+  .fb1c {
+    width: 100%;
+    height: 80%;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--building-color4),
+        var(--building-color4) 10%,
+        transparent 10%,
+        transparent 15%
+      ),
+      repeating-linear-gradient(
+        var(--building-color4),
+        var(--building-color4) 10%,
+        var(--window-color4) 10%,
+        var(--window-color4) 90%
+      );
+  }
+  
+  .fb2 {
+    width: 10%;
+    height: 40%;
+    z-index: 2;
+  }
+  
+  .fb2a {
+    width: 80%;
+    border-bottom: 10vh solid var(--building-color3);
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+  }
+  
+  .fb2b {
+    width: 100%;
+    height: 75%;
+    background-color: var(--building-color3);
+  }
+  
+  .fb2-window {
+    width: 22%;
+    height: 100%;
+    background-color: var(--window-color3);
+  }
+  
+  .fb3 {
+    width: 10%;
+    height: 35%;
+  }
+    
+  .fb3a {
+    width: 80%;
+    height: 15%;
+    background-color: var(--building-color1);
+  }
+    
+  .fb3b {
+    width: 100%;
+    height: 35%;
+    background-color: var(--building-color1);
+  }
+  
+  .fb3-window {
+    width: 25%;
+    height: 80%;
+    background-color: var(--window-color1);
+  }
+  
+  .fb4 {
+    width: 8%;
+    height: 45%;
+    position: relative;
+    left: 10%;
+  }
+  
+  .fb4a {
+    border-top: 5vh solid transparent;
+    border-left: 8vw solid var(--building-color1);
+  }
+  
+  .fb4b {
+    width: 100%;
+    height: 89%;
+    background-color: var(--building-color1);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .fb4-window {
+    width: 30%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: var(--window-color1);
+    margin: 10%;
+  }
+  
+  .fb5 {
+    width: 10%;
+    height: 33%;
+    position: relative;
+    right: 10%;
+    background: repeating-linear-gradient(
+        var(--building-color2),
+        var(--building-color2) 5%,
+        transparent 5%,
+        transparent 10%
+      ),
+      repeating-linear-gradient(
+        90deg,
+        var(--building-color2),
+        var(--building-color2) 12%,
+        var(--window-color2) 12%,
+        var(--window-color2) 44%
+      );
+  }
+  
+  .fb6 {
+    width: 9%;
+    height: 38%;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--building-color3),
+        var(--building-color3) 10%,
+        transparent 10%,
+        transparent 30%
+      ),
+      repeating-linear-gradient(
+        var(--building-color3),
+        var(--building-color3) 10%,
+        var(--window-color3) 10%,
+        var(--window-color3) 30%
+      );
+  }
+  
+  /* @media only screen and (max-width: 1600px) {
+    .background-buildings, .foreground-buildings {
+        justify-content: center space-evenly;
+        height: 80%;
+        top: 20%;
+    }    
+    
+    .fb1 {
+        display: none;
+    }
+
+    .fb2 {
+        position: absolute;
+        left: 30%;
+        bottom: 2.5%;
+    }
+
+    .fb3 {
+       
+    }
+
+    .fb6 {
+        display: none;
+    }
+
+    .bb5 {
+        display: none;
+    } */
+
+
+  @media only screen and (max-width: 1000px) {
+    .background-buildings, .foreground-buildings {
+        justify-content: center space-evenly;
+        height: 80%;
+        top: 20%;
+    }    
+    
+    .fb1 {
+        display: none;
+    }
+
+    .fb2 {
+        position: absolute;
+        left: 30%;
+        bottom: 2.5%;
+    }
+
+    .fb3 {
+       
+    }
+
+    .fb6 {
+        display: none;
+    }
+
+    .bb5 {
+        display: none;
+    }
+
+    .bb4 {
+        display: none;
+    }
+
+    .fb4 {
+        display: none;
+    }
+
+    .welcome-text.t-1 {
+        left: 34%;
+        top: 61.5%;
+    }
+
+    .welcome-text.t-2 {
+        left: 40.5%;
+        top: 67.5%;
+    }
+
+    .welcome-text.t-3 {
+        left: 51.5%;
+        top: 69%;
+    }
+
+    .welcome-text.left {
+        left: 25.6%;
+        top: 39.5%;
+    }
+
+    .welcome-text.middle {
+        left: 57%;
+        top: 51.5%;
+    }
+
+    .exlamation {
+        display: contents;
+    }
+
+    .there {
+        display: none;
+    }
+
+    .dev {
+        display: none;
+    }
+
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .fb5 {
+        position: absolute;
+        right: 22%;
+    }
+    
+    .welcome-text.left {
+        left: 24%;
+        top: 39.5%;
+    }
+    
+    .welcome-text.middle {
+        left: 53%;
+        top: 51.5%;
+    }
+    
+    .welcome-text.t-2 {
+        left: 42%;
+        top: 66.5%;
+        transform: rotate(20deg);
+    }
+
+    .welcome-text.t-3 {
+        left: 65%;
+        top: 69%;
+        }
+
+  }
+
+  /* END OF SKYLINE */      
+
+
+  #projects {
+    width: 100%;
+    border-bottom: 10px solid #ae7dc3;
+  }
+
+  #projects h1:nth-of-type(1) {
+    text-align: center;
+    color: rgb(172, 28, 172);
+    margin-top: 7vh;
+    margin-bottom: 5vh;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+    max-width: 550px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  #projects h1:nth-of-type(2) {
+    color:rgb(75, 63, 63);
+    margin: 0;
+    text-align: center;
+  }
+
+  #projects a:hover {
+    color:rgb(172, 28, 172);
+  }
+
+  #contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    font-family: Monospace, sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #contact h1:hover {
+    font-size: 550%;
+    color: green;
+    font-weight: 800;
+  }
+
+  #contact a {
+    color: rgb(106, 106, 106);
+  }
+
+  #contact a:hover {
+    color: blue;
+    font-size: 150%;
+  }
+
+
+  .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    font-size: 3rem;
+    color: black;
+  }
